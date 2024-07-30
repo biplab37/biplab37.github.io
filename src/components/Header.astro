@@ -5,11 +5,15 @@ import { SITE_TITLE } from "../consts";
 
 <header>
     <nav>
-        <h2><a href="/">{SITE_TITLE}</a></h2>
-        <div class="internal-links">
-            <HeaderLink href="/">Home</HeaderLink>
-            <HeaderLink href="/blog">Blog</HeaderLink>
-            <HeaderLink href="/about">About</HeaderLink>
+        <div class="container flex justify-between mx-auto">
+            <h2 class=""><a href="/">{SITE_TITLE}</a></h2>
+            <div class="internal-links">
+                <HeaderLink href="/">Home</HeaderLink>
+                <HeaderLink href="/about">About</HeaderLink>
+                <HeaderLink href="/projects">Projects</HeaderLink>
+                <HeaderLink href="/blog">Blog</HeaderLink>
+                <HeaderLink href="/contact">Contact</HeaderLink>
+            </div>
         </div>
     </nav>
 </header>
@@ -21,7 +25,7 @@ import { SITE_TITLE } from "../consts";
         box-shadow: 0 2px 8px rgba(var(--black), 5%);
     }
     h2 {
-        margin: 0;
+        margin: auto 0;
         font-size: 1em;
     }
 
