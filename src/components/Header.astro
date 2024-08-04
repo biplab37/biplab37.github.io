@@ -21,7 +21,11 @@ const links = [
 <header class="sticky top-0 z-50 bg-zinc-50 shadow-md">
     <nav class="">
         <div class="container flex justify-between mx-auto">
-            <h2 class=""><a href="/">{SITE_TITLE}</a></h2>
+            <h2 class="uppercase text-lg tracking-wide content-center">
+                <a href="/">
+                    <img src="favicon.svg" alt="Icon" class="h-6" />
+                </a>
+            </h2>
             <div class="flex gap-4 my-2">
                 {
                     links.map((link) => (
@@ -32,38 +36,3 @@ const links = [
         </div>
     </nav>
 </header>
-<style>
-    h2 {
-        margin: auto 0;
-        font-size: 1em;
-    }
-
-    h2 a,
-    h2 a.active {
-        text-decoration: none;
-    }
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    nav a {
-        padding: 1em 0.5em;
-        color: var(--black);
-        border-bottom: 4px solid transparent;
-        text-decoration: none;
-    }
-    nav a.active {
-        text-decoration: none;
-        border-bottom-color: var(--accent);
-    }
-    .social-links,
-    .social-links a {
-        display: flex;
-    }
-    @media (max-width: 720px) {
-        .social-links {
-            display: none;
-        }
-    }
-</style>
