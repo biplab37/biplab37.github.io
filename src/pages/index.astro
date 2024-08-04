@@ -6,6 +6,9 @@ import LatestPublication from "../components/latestpublication.astro";
 import FeaturedProject from "../components/featuredproject.astro";
 import LatestBlog from "../components/latestblog.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Timeline from "@/components/Timeline.astro";
+import { InstituteImageCarousel } from "@/components/InstituteImageCarousel.tsx";
+import { image_list } from "@/content/data";
 ---
 
 <!doctype html>
@@ -16,30 +19,39 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     <body>
         <Header />
         <main class="container">
-            <div>
+            <div class="py-24">
                 <section class="grid grid-cols-12 gap-4">
                     <div class="col-span-8 flex flex-col justify-center">
-                        <h2 class="">Biplab Mahato</h2>
-                        <p>PhD Student</p>
-                        <p>
+                        <h2 class="text-3xl font-bold tracking-wide">
+                            Biplab Mahato
+                        </h2>
+                        <p class="text-slate-600">PhD Student</p>
+                        <p class="italic font-serif">
                             Institute of Theoretical Physics, University of
                             Wrocław.
                         </p>
                     </div>
-                    <div class="col-span-4 ms-32 p-4">
+                    <div
+                        class="col-span-4 ms-32 rounded-xl shadow-md overflow-hidden"
+                    >
                         <img
                             src="/biplab.JPG"
                             alt="Biplab"
-                            class="rounded-xl shadow-lg shadow-slate-400"
+                            class="hover:scale-150 hover:-translate-y-20 transform transition duration-500 ease-in-out"
                         />
                     </div>
                 </section>
                 <!-- Institute section -->
-                <section>
-                    <!-- Photo -->
-                    <div></div>
-                    <!-- timeline -->
-                    <div></div>
+                <section class="py-32">
+                    <div class="grid grid-cols-12 gap-4 items-center">
+                        <div class="col-span-8 content-center px-14">
+                            <InstituteImageCarousel client:idle />
+                        </div>
+                        <!-- timeline -->
+                        <div class="col-span-4">
+                            <Timeline />
+                        </div>
+                    </div>
                 </section>
                 <!-- Advertising section -->
                 <section>

@@ -1,29 +1,38 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+import {
+    NavigationMenu,
+    NavigationMenuList,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuContent,
+    NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 import { SITE_TITLE } from "../consts";
+const links = [
+    { href: "/", text: "Home" },
+    { href: "/about", text: "About" },
+    { href: "/projects", text: "Projects" },
+    { href: "/blog", text: "Blog" },
+    { href: "/contact", text: "Contact" },
+];
 ---
 
-<header>
-    <nav>
+<header class="sticky top-0 z-50 bg-zinc-50 shadow-md">
+    <nav class="">
         <div class="container flex justify-between mx-auto">
             <h2 class=""><a href="/">{SITE_TITLE}</a></h2>
-            <div class="internal-links">
-                <HeaderLink href="/">Home</HeaderLink>
-                <HeaderLink href="/about">About</HeaderLink>
-                <HeaderLink href="/projects">Projects</HeaderLink>
-                <HeaderLink href="/blog">Blog</HeaderLink>
-                <HeaderLink href="/contact">Contact</HeaderLink>
+            <div class="flex gap-4 my-2">
+                {
+                    links.map((link) => (
+                        <HeaderLink href={link.href}>{link.text}</HeaderLink>
+                    ))
+                }
             </div>
         </div>
     </nav>
 </header>
 <style>
-    header {
-        margin: 0;
-        padding: 0 1em;
-        background: white;
-        box-shadow: 0 2px 8px rgba(var(--black), 5%);
-    }
     h2 {
         margin: auto 0;
         font-size: 1em;
