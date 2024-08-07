@@ -12,6 +12,9 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        back: "url('/background.png')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -16,49 +16,51 @@ import { image_list } from "@/content/data";
     <head>
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     </head>
-    <body>
+    <body class="bg-back bg-cover">
         <Header />
-        <main class="container">
-            <div class="py-24">
-                <section class="grid grid-cols-12 gap-4">
-                    <div class="col-span-8 flex flex-col justify-center">
-                        <h2 class="text-3xl font-bold tracking-wide">
-                            Biplab Mahato
-                        </h2>
-                        <p class="text-slate-600">PhD Student</p>
-                        <p class="italic font-serif">
-                            Institute of Theoretical Physics, University of
-                            Wrocław.
-                        </p>
-                    </div>
-                    <div
-                        class="col-span-4 ms-32 rounded-xl shadow-md overflow-hidden"
-                    >
-                        <img
-                            src="/biplab.JPG"
-                            alt="Biplab"
-                            class="hover:scale-150 hover:-translate-y-20 transform transition duration-500 ease-in-out"
-                        />
-                    </div>
-                </section>
-                <!-- Institute section -->
-                <section class="py-32">
-                    <div class="grid grid-cols-12 gap-4 items-center">
-                        <div class="col-span-8 content-center px-14">
-                            <InstituteImageCarousel client:idle />
+        <main>
+            <div class="container">
+                <div class="py-24">
+                    <section class="grid grid-cols-12 gap-4">
+                        <div class="col-span-8 flex flex-col justify-center">
+                            <h2 class="text-3xl font-bold tracking-wide">
+                                Biplab Mahato
+                            </h2>
+                            <p class="text-slate-600">PhD Student</p>
+                            <p class="italic font-serif">
+                                Institute of Theoretical Physics, University of
+                                Wrocław.
+                            </p>
                         </div>
-                        <!-- timeline -->
-                        <div class="col-span-4">
-                            <Timeline />
+                        <div
+                            class="col-span-4 ms-32 rounded-xl shadow-md overflow-hidden"
+                        >
+                            <img
+                                src="/biplab.JPG"
+                                alt="Biplab"
+                                class="hover:scale-150 hover:-translate-y-20 transform transition duration-500 ease-in-out"
+                            />
                         </div>
-                    </div>
-                </section>
-                <!-- Advertising section -->
-                <section>
-                    <LatestPublication />
-                    <FeaturedProject />
-                    <LatestBlog />
-                </section>
+                    </section>
+                    <!-- Institute section -->
+                    <section class="py-32">
+                        <div class="grid grid-cols-12 gap-4 items-center">
+                            <div class="col-span-8 content-center px-14">
+                                <InstituteImageCarousel client:idle />
+                            </div>
+                            <!-- timeline -->
+                            <div class="col-span-4">
+                                <Timeline />
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Advertising section -->
+                    <section>
+                        <LatestPublication />
+                        <FeaturedProject />
+                        <LatestBlog />
+                    </section>
+                </div>
             </div>
         </main>
         <Footer />

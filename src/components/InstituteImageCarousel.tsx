@@ -22,8 +22,8 @@ export function InstituteImageCarousel() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="bg-white/30 backdrop-blur-sm border-none hover:bg-white/50" />
+      <CarouselNext className="bg-white/30 backdrop-blur-sm border-none hover:bg-white/50" />
     </Carousel>
   );
 }
